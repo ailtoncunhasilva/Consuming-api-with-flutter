@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hero_list/widgets/text_customized.dart';
+import 'package:flutter_hero_list/widgets/row_customized.dart';
 
 class ConnectionsCard extends StatelessWidget {
 
@@ -41,29 +41,8 @@ class ConnectionsCard extends StatelessWidget {
               padding: const EdgeInsets.all(6),
               child: Column(
                 children: [
-                  Row(
-                    children: [
-                      TextCustomized(
-                          text: 'Group Affiliation: ',
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
-                      Expanded(
-                        child: TextCustomized(
-                            text: '$groupAffiliation', color: Colors.grey[700]),
-                      ),
-                    ],
-                  ),
-                  Divider(height: 2, color: Colors.grey[600]),
-                  Row(
-                    children: [
-                      TextCustomized(
-                          text: 'Relative: ',
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
-                      Expanded(child: TextCustomized(text: '$relatives', color: Colors.grey[700])),
-                    ],
-                  ),
-                  Divider(height: 2, color: Colors.grey[600]),
+                  RowCustomized(textOne: 'Group affiliation: ', textTwo: '$groupAffiliation'),  
+                  RowCustomized(textOne: 'Relatives: ', textTwo: '$relatives'),  
                 ],
               ),
             ),

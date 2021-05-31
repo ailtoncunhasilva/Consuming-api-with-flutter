@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hero_list/widgets/text_customized.dart';
+import 'package:flutter_hero_list/widgets/row_customized.dart';
 
 class AppearanceCard extends StatelessWidget {
   final String gender;
@@ -50,68 +50,12 @@ class AppearanceCard extends StatelessWidget {
               padding: const EdgeInsets.all(6),
               child: Column(
                 children: [
-                  Row(
-                    children: [
-                      TextCustomized(
-                          text: 'Gender: ',
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
-                      TextCustomized(text: '$gender', color: Colors.grey[700]),
-                    ],
-                  ),
-                  Divider(height: 2, color: Colors.grey[600]),
-                  Row(
-                    children: [
-                      TextCustomized(
-                          text: 'Race: ',
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
-                      TextCustomized(text: '$race', color: Colors.grey[700]),
-                    ],
-                  ),
-                  Divider(height: 2, color: Colors.grey[600]),
-                  Row(
-                    children: [
-                      TextCustomized(
-                          text: 'Height: ',
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
-                      TextCustomized(text: '$height', color: Colors.grey[700]),
-                    ],
-                  ),
-                  Divider(height: 2, color: Colors.grey[600]),
-                  Row(
-                    children: [
-                      TextCustomized(
-                          text: 'Weight: ',
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
-                      TextCustomized(text: '$weight', color: Colors.grey[700]),
-                    ],
-                  ),
-                  Divider(height: 2, color: Colors.grey[600]),
-                  Row(
-                    children: [
-                      TextCustomized(
-                          text: 'Eye color: ',
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
-                      TextCustomized(
-                          text: '$eyeColor', color: Colors.grey[700]),
-                    ],
-                  ),
-                  Divider(height: 2, color: Colors.grey[600]),
-                  Row(
-                    children: [
-                      TextCustomized(
-                          text: 'Hair color: ',
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
-                      TextCustomized(
-                          text: '$hairColor', color: Colors.grey[700]),
-                    ],
-                  ),
-                  Divider(height: 2, color: Colors.grey[600]),
+                  RowCustomized(textOne: 'Gender: ', textTwo: '$gender'),
+                  RowCustomized(textOne: 'Race: ', textTwo: '$race'),
+                  RowCustomized(textOne: 'Height: ', textTwo: '$height'),
+                  RowCustomized(textOne: 'Weight: ', textTwo: '$weight'),
+                  RowCustomized(textOne: 'Eye color: ', textTwo: '$eyeColor'),  
+                  RowCustomized(textOne: 'Hair color: ', textTwo: '$hairColor'),
                 ],
               ),
             ),

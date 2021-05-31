@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hero_list/widgets/text_customized.dart';
+import 'package:flutter_hero_list/widgets/row_customized.dart';
 
 class BiographyCard extends StatelessWidget {
 
@@ -48,76 +48,13 @@ class BiographyCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    children: [
-                      TextCustomized(
-                          text: 'Full name: ',
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
-                      TextCustomized(text: '$fullName', color: Colors.grey[700]),
-                    ],
-                  ),
-                  Divider(height: 2, color: Colors.grey[600]),
-                  Row(
-                    children: [
-                      TextCustomized(
-                          text: 'Alter Egos: ',
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
-                      TextCustomized(text: '$alterEgos', color: Colors.grey[700]),
-                    ],
-                  ),
-                  Divider(height: 2, color: Colors.grey[600]),
-                  Row(
-                    children: [
-                      TextCustomized(
-                          text: 'Aliases: ',
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
-                      Expanded(child: TextCustomized(text: '$aliases', color: Colors.grey[700])),
-                    ],
-                  ),
-                  Divider(height: 2, color: Colors.grey[600]),
-                  Row(
-                    children: [
-                      TextCustomized(
-                          text: 'Place of birth: ',
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
-                      TextCustomized(text: '$placeOfBirth', color: Colors.grey[700]),
-                    ],
-                  ),
-                  Divider(height: 2, color: Colors.grey[600]),
-                  Row(
-                    children: [
-                      TextCustomized(
-                          text: 'First appearance: ',
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
-                      Expanded(child: TextCustomized(text: '$firstAppearance', color: Colors.grey[700])),
-                    ],
-                  ),
-                  Divider(height: 2, color: Colors.grey[600]),
-                  Row(
-                    children: [
-                      TextCustomized(
-                          text: 'Publisher: ',
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
-                      TextCustomized(text: '$publisher', color: Colors.grey[700]),
-                    ],
-                  ),
-                  Divider(height: 2, color: Colors.grey[600]),
-                  Row(
-                    children: [
-                      TextCustomized(
-                          text: 'Alignment: ',
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
-                      TextCustomized(text: '$alignment', color: Colors.grey[700]),
-                    ],
-                  ),
-                  Divider(height: 2, color: Colors.grey[600]),
+                  RowCustomized(textOne: 'Full name: ', textTwo: '$fullName'),
+                  RowCustomized(textOne: 'Alter egos: ', textTwo: '$alterEgos'),  
+                  RowCustomized(textOne: 'Aliases: ', textTwo: '$aliases'),
+                  RowCustomized(textOne: 'Place of birth: ', textTwo: '$placeOfBirth'),
+                  RowCustomized(textOne: 'First appearace: ', textTwo: '$firstAppearance'),
+                  RowCustomized(textOne: 'Publisher: ', textTwo: '$publisher'),
+                  RowCustomized(textOne: 'Alignment: ', textTwo: '$alignment'),
                 ],
               ),
             ),

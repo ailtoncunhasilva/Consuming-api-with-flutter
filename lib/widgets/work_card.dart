@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hero_list/widgets/text_customized.dart';
+import 'package:flutter_hero_list/widgets/row_customized.dart';
 
 class WorkCard extends StatelessWidget {
   final String occupation;
@@ -40,29 +40,8 @@ class WorkCard extends StatelessWidget {
               padding: const EdgeInsets.all(6),
               child: Column(
                 children: [
-                  Row(
-                    children: [
-                      TextCustomized(
-                          text: 'Occupation: ',
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
-                      Expanded(
-                        child: TextCustomized(
-                            text: '$occupation', color: Colors.grey[700]),
-                      ),
-                    ],
-                  ),
-                  Divider(height: 2, color: Colors.grey[600]),
-                  Row(
-                    children: [
-                      TextCustomized(
-                          text: 'Base: ',
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
-                      Expanded(child: TextCustomized(text: '$base', color: Colors.grey[700])),
-                    ],
-                  ),
-                  Divider(height: 2, color: Colors.grey[600]),
+                  RowCustomized(textOne: 'Occupation: ', textTwo: '$occupation'),
+                  RowCustomized(textOne: 'Base: ', textTwo: '$base'),
                 ],
               ),
             ),
