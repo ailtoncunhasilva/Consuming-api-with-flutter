@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hero_list/components/search_dialog.dart';
 import 'package:flutter_hero_list/data/api_manager.dart';
+import 'package:flutter_hero_list/screens/filter_screen.dart';
 import 'package:flutter_hero_list/tiles/super_hero_tile.dart';
 import 'package:provider/provider.dart';
 
@@ -80,6 +81,15 @@ class HeroesSuperScreen extends StatelessWidget {
             ),
           );
         },
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.orange,
+        onPressed: (){
+          Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => FilterScreen()),
+          );
+        },
+        child: Text('Filter'),
       ),
     );
   }
