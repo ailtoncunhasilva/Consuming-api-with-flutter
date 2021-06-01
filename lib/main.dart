@@ -20,9 +20,9 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         theme: ThemeData(
-          cursorColor: Colors.purple[600],
+          cursorColor: Colors.grey[800],
           primarySwatch: Colors.blue,
-          primaryColor: Colors.purple[600],
+          primaryColor: Colors.grey[800],
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
         debugShowCheckedModeBanner: false,

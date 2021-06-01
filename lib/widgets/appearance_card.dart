@@ -21,7 +21,7 @@ class AppearanceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 6,
-      margin: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
+      margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       child: Container(
         decoration: BoxDecoration(
           border: Border.all(
