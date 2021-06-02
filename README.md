@@ -19,16 +19,16 @@ samples, guidance on mobile development, and a full API reference.
 
 Tela inicial com a lista completa de imagens com respectivos nomes da API no formato "grid".
 
-![image](images\screenshot1.jpg)
+![image](images/screenshot1.jpg)
 
 ## Tela com detalhes dos heróis
 
 Tela com detalhes de cada herói como: estatística de energia, aparência, biografia, conexões e etc...
 
-![image](images\screenshot3.jpg)
+![image](image/screenshot3.jpg)
 
 ## Tela de pesquisa
 
 Tela de pesquisa onde se é possível pesquisar um ítem da lista pelo nome completo ou parcial
 
-![image](images\screenshot2.jpg)
+![image](images/screenshot2.jpg)
