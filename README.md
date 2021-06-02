@@ -25,7 +25,7 @@ Tela inicial com a lista completa de imagens com respectivos nomes da API no for
 
 Tela com detalhes de cada herói como: estatística de energia, aparência, biografia, conexões e etc...
 
-![image](image/screenshot3.jpg)
+![image](images/screenshot3.jpg)
 
 ## Tela de pesquisa
 
