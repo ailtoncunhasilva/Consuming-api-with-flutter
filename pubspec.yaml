@@ -51,6 +51,9 @@ flutter:
      - images/imagebackground.jpg
      - images/imagebackground image.jpg
      - images/superheroeslogo.png
+     - images/herosuper1.jpg
+     - images/herosuper2.jpg
+     - images/herosuper3.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
