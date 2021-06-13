@@ -13,6 +13,16 @@ class ApiManager extends ChangeNotifier {
 
   List<HeroSuper> heroesList = [];
 
+  String _gender = 'Todos';
+
+  String get gender => _gender;
+
+  set gender(String value) {
+    _gender = value;
+
+    notifyListeners();
+  }
+
   String _search = '';
 
   String get search => _search;
@@ -26,13 +36,17 @@ class ApiManager extends ChangeNotifier {
   List<HeroSuper> get filteredHeroesSuper {
     final List<HeroSuper> filteredHeroesSuper = [];
 
-    if (search.isEmpty) {
+    if (search.isEmpty && gender == 'Todos') {
       filteredHeroesSuper.addAll(heroesList);
-    } else {
+    } else if (search.isNotEmpty) {
       filteredHeroesSuper.addAll(heroesList
-          .where((h) => h.name.toLowerCase().contains(search.toLowerCase())));
+          .where((s) => s.name.toLowerCase().contains(search.toLowerCase())));
+    } else if (gender.isNotEmpty && gender == 'Female') {
+      filteredHeroesSuper
+          .addAll(heroesList.where((h) => h.gender.contains(gender)));
+    } else if (gender.isNotEmpty && gender == 'Male') {
+      filteredHeroesSuper.addAll(heroesList.where((e) => e.gender == 'Male'));
     }
-
     return filteredHeroesSuper;
   }
 

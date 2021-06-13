@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hero_list/data/api_manager.dart';
+import 'package:flutter_hero_list/data/gender_manager.dart';
 import 'package:flutter_hero_list/screens/splash_screen.dart';
 import 'package:provider/provider.dart';
 //import 'package:flutter_hero_list/screens/super_heroes_screen.dart';
@@ -15,6 +16,10 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(
           create: (_) => ApiManager(),
+          lazy: false,
+        ),
+        ChangeNotifierProvider(
+          create: (_) => GenderManager(),
           lazy: false,
         ),
       ],

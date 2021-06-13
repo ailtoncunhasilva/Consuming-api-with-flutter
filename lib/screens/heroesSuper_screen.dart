@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hero_list/components/gender_dialog.dart';
 import 'package:flutter_hero_list/components/search_dialog.dart';
 import 'package:flutter_hero_list/data/api_manager.dart';
 import 'package:flutter_hero_list/tiles/super_hero_tile.dart';
@@ -80,6 +81,17 @@ class HeroesSuperScreen extends StatelessWidget {
             ),
           );
         },
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        elevation: 14,
+        backgroundColor: Colors.amber[800],
+        onPressed: () async{
+          final gender = await showDialog(context: context, builder: (_) => GenderDialog());
+          if(gender != null){
+            context.read<ApiManager>().gender = gender;
+          }
+        },
+        label: Text('Filtro', style: TextStyle(fontSize: 16),),
       ),
     );
   }
